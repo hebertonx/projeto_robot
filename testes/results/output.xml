@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201015 19:46:37.730" rpa="false">
+<suite id="s1" name="CaseFinalizarCompra" source="C:\Projetos\robot_mystore\testes\CaseFinalizarCompra.robot">
+<test id="s1-t1" name="Cenário 01 - Realizar compras com usuário não logado">
+<kw name="Dado que esteja na tela de home" library="ResourcesCases">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:37.867" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20201015 19:46:37.867" endtime="20201015 19:46:44.661"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:46:37.866" endtime="20201015 19:46:44.661"></status>
+</kw>
+<kw name="Quando adicionar ao carrinho de compras" library="ResourcesCases">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${PRODUCT}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:44.662" level="INFO">Simulating Mouse Over on element 'css=#homefeatured &gt; li:nth-child(1)'.</msg>
+<status status="PASS" starttime="20201015 19:46:44.662" endtime="20201015 19:46:44.949"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ADD_TO_CART}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20201015 19:46:44.950" endtime="20201015 19:46:44.993"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ADD_TO_CART}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:44.994" level="INFO">Clicking element 'xpath=//span[contains(text(),'Add to cart')]'.</msg>
+<status status="PASS" starttime="20201015 19:46:44.993" endtime="20201015 19:46:45.032"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:46:44.662" endtime="20201015 19:46:45.032"></status>
+</kw>
+<kw name="E seguir para o carrinho de compras" library="ResourcesCases">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Proceed_to_checkout}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:45.033" level="INFO">Clicking element 'xpath=//*[contains(@href,'http://automationpractice.com/index.php?controller=order')]'.</msg>
+<status status="PASS" starttime="20201015 19:46:45.033" endtime="20201015 19:46:46.300"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Proceed_to_checkout}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:46.300" level="INFO">Clicking element 'xpath=//*[contains(@href,'http://automationpractice.com/index.php?controller=order')]'.</msg>
+<status status="PASS" starttime="20201015 19:46:46.300" endtime="20201015 19:46:47.149"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:46:45.033" endtime="20201015 19:46:47.149"></status>
+</kw>
+<kw name="E seguir para o login" library="ResourcesCases">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Proceed_to_checkout_car}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:47.149" level="INFO">Clicking element 'xpath=//*[contains(@href,'http://automationpractice.com/index.php?controller=order&amp;step=1')]'.</msg>
+<status status="PASS" starttime="20201015 19:46:47.149" endtime="20201015 19:46:48.600"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:46:47.149" endtime="20201015 19:46:48.600"></status>
+</kw>
+<kw name="E preencher os dados de email, senha e confirmar" library="ResourcesCases">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${EMAIL_INPUT}</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:48.602" level="INFO">Typing text 'heberton@gmail.com.br' into text field 'xpath=//input[@id='email']'.</msg>
+<status status="PASS" starttime="20201015 19:46:48.602" endtime="20201015 19:46:48.683"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:48.683" level="INFO">Typing password into text field 'xpath=//input[@id='passwd']'.</msg>
+<msg timestamp="20201015 19:46:48.718" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20201015 19:46:48.762" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20201015 19:46:48.683" endtime="20201015 19:46:48.762"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SIG_IN}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:48.762" level="INFO">Clicking element 'xpath=//button[@id='SubmitLogin']'.</msg>
+<status status="PASS" starttime="20201015 19:46:48.762" endtime="20201015 19:46:50.065"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:46:48.601" endtime="20201015 19:46:50.065"></status>
+</kw>
+<kw name="E seguir para a remesa" library="ResourcesCases">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Proceed_to_checkout_addres}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:50.066" level="INFO">Clicking element 'xpath=//button[@name='processAddress']'.</msg>
+<status status="PASS" starttime="20201015 19:46:50.066" endtime="20201015 19:46:51.525"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:46:50.066" endtime="20201015 19:46:51.525"></status>
+</kw>
+<kw name="E marcar o checkbox de termo de aceite e seguir para o pagamento" library="ResourcesCases">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${CHECK}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:51.526" level="INFO">Selecting checkbox 'xpath=//input[@name='cgv']'.</msg>
+<status status="PASS" starttime="20201015 19:46:51.526" endtime="20201015 19:46:51.591"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Proceed_to_checkout_shipping}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:51.591" level="INFO">Clicking element 'xpath=//button[@name='processCarrier']'.</msg>
+<status status="PASS" starttime="20201015 19:46:51.591" endtime="20201015 19:46:52.968"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:46:51.526" endtime="20201015 19:46:52.968"></status>
+</kw>
+<kw name="E selecionar a forma de pagamento e confirmar" library="ResourcesCases">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PAY_BY_BANK}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:52.970" level="INFO">Clicking element 'xpath=//*[contains(@href,'http://automationpractice.com/index.php?fc=module&amp;module=bankwire&amp;controller=payment')]'.</msg>
+<status status="PASS" starttime="20201015 19:46:52.970" endtime="20201015 19:46:53.832"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CONFIRM_ORDER}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:53.833" level="INFO">Clicking element 'xpath=//button[@class='button btn btn-default button-medium']'.</msg>
+<status status="PASS" starttime="20201015 19:46:53.832" endtime="20201015 19:46:55.511"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:46:52.970" endtime="20201015 19:46:55.512"></status>
+</kw>
+<kw name="Então deverá ser exibida a mensagem &quot;Your order on My Store is complete.&quot;" library="ResourcesCases">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${MSG_VALUE}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:55.531" level="INFO">Current page contains text 'Your order on My Store is complete.'.</msg>
+<status status="PASS" starttime="20201015 19:46:55.512" endtime="20201015 19:46:55.531"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:46:55.512" endtime="20201015 19:46:55.531"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:46:37.866" endtime="20201015 19:46:55.532" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Cenário 02 - Não permitir finalizar a compra">
+<kw name="Dado que esteja na tela de home" library="ResourcesCases">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201015 19:46:55.533" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20201015 19:46:55.533" endtime="20201015 19:47:01.481"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:46:55.532" endtime="20201015 19:47:01.481"></status>
+</kw>
+<kw name="Quando adicionar ao carrinho de compras" library="ResourcesCases">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${PRODUCT}</arg>
+</arguments>
+<msg timestamp="20201015 19:47:01.482" level="INFO">Simulating Mouse Over on element 'css=#homefeatured &gt; li:nth-child(1)'.</msg>
+<status status="PASS" starttime="20201015 19:47:01.482" endtime="20201015 19:47:01.756"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ADD_TO_CART}</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20201015 19:47:01.756" endtime="20201015 19:47:01.774"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ADD_TO_CART}</arg>
+</arguments>
+<msg timestamp="20201015 19:47:01.775" level="INFO">Clicking element 'xpath=//span[contains(text(),'Add to cart')]'.</msg>
+<status status="PASS" starttime="20201015 19:47:01.774" endtime="20201015 19:47:01.809"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:47:01.481" endtime="20201015 19:47:01.810"></status>
+</kw>
+<kw name="E seguir para o carrinho de compras" library="ResourcesCases">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Proceed_to_checkout}</arg>
+</arguments>
+<msg timestamp="20201015 19:47:01.810" level="INFO">Clicking element 'xpath=//*[contains(@href,'http://automationpractice.com/index.php?controller=order')]'.</msg>
+<status status="PASS" starttime="20201015 19:47:01.810" endtime="20201015 19:47:03.085"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Proceed_to_checkout}</arg>
+</arguments>
+<msg timestamp="20201015 19:47:03.085" level="INFO">Clicking element 'xpath=//*[contains(@href,'http://automationpractice.com/index.php?controller=order')]'.</msg>
+<status status="PASS" starttime="20201015 19:47:03.085" endtime="20201015 19:47:03.948"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:47:01.810" endtime="20201015 19:47:03.948"></status>
+</kw>
+<kw name="E excluir o item adicionado" library="ResourcesCases">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20201015 19:47:08.951" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20201015 19:47:03.949" endtime="20201015 19:47:08.951"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${DELETE}</arg>
+</arguments>
+<msg timestamp="20201015 19:47:08.953" level="INFO">Clicking element 'xpath=//a[@id='1_1_0_0']'.</msg>
+<status status="PASS" starttime="20201015 19:47:08.952" endtime="20201015 19:47:08.997"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:47:03.948" endtime="20201015 19:47:08.997"></status>
+</kw>
+<kw name="Então deverá ser exibida a mensagem &quot;Your shopping cart is empty.&quot;" library="ResourcesCases">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${MSG_VALUE2}</arg>
+</arguments>
+<msg timestamp="20201015 19:47:09.012" level="INFO">Current page contains text 'Your shopping cart is empty.'.</msg>
+<status status="PASS" starttime="20201015 19:47:08.998" endtime="20201015 19:47:09.012"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:47:08.997" endtime="20201015 19:47:09.012"></status>
+</kw>
+<status status="PASS" starttime="20201015 19:46:55.532" endtime="20201015 19:47:09.012" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201015 19:46:37.731" endtime="20201015 19:47:09.013"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="CaseFinalizarCompra">CaseFinalizarCompra</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
